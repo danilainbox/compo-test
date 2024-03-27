@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compo</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon.svg">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">
+            <div class="header__top">
+                <div class="header__top-left">
+                    <a class="header__logo" href="./index.html">
+                        <img class="header__logo-image" src="assets/icons/brand.svg" alt="">
+                    </a>
+                    <button class="button button_blue">
+                        <img class="button__icon" src="assets/icons/header-menu-icon.svg" alt="">
+                        Меню
+                    </button>
+                </div>
+                <div class="header__search-field search-field">
+                    <button class="search-field__btn search-field__close-btn" id="clear-search-btn">
+                        <img src="assets/icons/close-icon.svg" alt="">
+                    </button>
+                    <button class="search-field__btn search-field__search-btn">
+                        <img src="assets/icons/search-icon.svg" alt="">
+                    </button>
+                    <input
+                            class="input search-field__input"
+                            type="text"
+                            id="search-field"
+                            placeholder="Название запроса"
+                    >
+                </div>
+                <div class="header__top-right">
+                    <div class="header__notifications">
+                        <button class="notifications">
+                            <img class="notifications__icon" src="assets/icons/bell-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="header__favorites">
+                        <button class="favorites">
+                            <img class="favorites__icon" src="assets/icons/favorites-icon.svg" alt="">
+                            <img class="favorites__active-icon" src="assets/icons/favorites-active-icon.svg" alt="">
+                        </button>
+                    </div>
+                    <button class="header__basket button button_light-blue">
+                        <img class="button__icon" src="assets/icons/basket-icon.svg" alt="">
+                        <span>464 540</span> <span class="header__basket-rub">₽</span>
+                    </button>
+                    <button class="profile-menu">
+                        <img class="profile-menu__avatar" src="assets/images/avatar.png" alt="">
+                        <span class="profile-menu__user-name">Ермаков Е.</span>
+                        <img src="assets/icons/arrow-down-icon.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <ul class="header-bottom-menu">
+                    <li>
+                        <a class="header-bottom-menu__link" href="#">Мои заказы</a>
+                    </li>
+                    <li>
+                        <a class="header-bottom-menu__link" href="#">Сотрудники</a>
+                    </li>
+                    <li>
+                        <a class="header-bottom-menu__link" href="#">Шаблоны заказов</a>
+                    </li>
+                    <li>
+                        <a class="header-bottom-menu__link" href="#">Обращения</a>
+                    </li>
+                </ul>
+                <div class="header-bottom-right-menu">
+                    <button class="button button_light-blue header-bottom-right-menu__button">
+                        <img class="button__icon" src="assets/icons/chat-icon.svg" alt="">
+                        <span>Ваш менеджер</span>
+                    </button>
+                    <a class="header-bottom-right-menu__link blue-link" href="#">% Акции</a>
+                    <a class="header-bottom-right-menu__link blue-link" href="#">Блог</a>
+                </div>
+            </div>
+        </header>
+        <main class="main-wrapper__content">
+            <div class="product-card">
+                <div class="breadcrumbs">
+                    <a class="breadcrumbs__link" href="#">Каталог</a><span>/</span>
+                    <a class="breadcrumbs__link" href="#">Обувь</a><span>/</span>
+                    <a class="breadcrumbs__link" href="#">Кроссовки</a><span>/</span>
+                    <span>Беговые</span>
+                </div>
+                <h1 class="product-card__title">
+                    Кроссовки мужские Skechers Sunny Dale
+                </h1>
+                <div class="product-card__info">
+                    <div class="product-card__gallery">
+                        <img class="product-card__main-image" src="assets/images/boots.png" alt="">
+                        <div class="product-card__gallery-previews">
+                            <button class="button button_light-blue product-card__gallery-button">
+                                <img src="assets/icons/arrow-left-icon.svg" alt="">
+                            </button>
+                            <img class="product-card__gallery-preview" src="assets/images/boots-preview-1.png" alt="">
+                            <img class="product-card__gallery-preview" src="assets/images/boots-preview-2.png" alt="">
+                            <img class="product-card__gallery-preview" src="assets/images/boots-preview-3.png" alt="">
+                            <img class="product-card__gallery-preview" src="assets/images/boots-preview-4.png" alt="">
+                            <button class="button button_light-blue product-card__gallery-button product-card__gallery-button_right">
+                                <img src="assets/icons/arrow-left-icon.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-card__details">
+                        <div class="product-card__price-and-features">
+                            <div class="product-card__price-wrapper">
+                                <div class="product-card__price-wrapper-top">
+                                    <p class="product-card__without-discount">
+                                        <span id="price-without-discount">14 150</span><span class="product-card__without-discount-currency"> ₽</span>
+                                        <span>цена без скидки</span>
+                                    </p>
+                                    <div class="product-card__price-and-discount">
+                                        <p class="product-card__price">
+                                            <span class="product-card__price-value" id="price">12 028</span><span class="product-card__currency">₽</span>
+                                        </p>
+                                        <span class="product-card__discount">-15%</span>
+                                    </div>
+                                    <div class="product-card__pack">
+                                        <span class="product-card__pack-size"><span id="pack-size">12</span> штук в уп.</span>
+                                        <div class="switcher">
+                                            <input class="switcher__checkbox" id="pack-toggle" type="checkbox">
+                                            <label for="pack-toggle" class="switcher__label">Заказ упаковкой</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price-wrapper-bottom">
+                                    <div class="product-card__delivery">
+                                        <div class="product-card__delivery-column">
+                                            <span class="product-card__delivery-value">Завтра</span>
+                                            <span class="product-card__delivery-label">Доставка</span>
+                                        </div>
+                                        <div class="product-card__delivery-column">
+                                            <span class="product-card__delivery-value">7 шт.</span>
+                                            <span class="product-card__delivery-label">Тарасовка</span>
+                                        </div>
+                                        <div class="product-card__delivery-column">
+                                            <span class="product-card__delivery-value">7 шт.</span>
+                                            <span class="product-card__delivery-label">Тарасовка</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__to-basket">
+                                        <button class="product-card__to-basket-btn button button_blue" id="to-basket">
+                                            <img class="button__icon" src="assets/icons/basket-white-icon.svg" alt="">
+                                            В корзину
+                                        </button>
+                                        <div class="button amount-button amount-button_hidden product-card__amount-button" id="amount-btn">
+                                            <button class="amount-button__minus">
+                                                <img class="amount-button__icon" src="assets/icons/minus-icon.svg" alt="">
+                                            </button>
+                                            <button class="amount-button__plus">
+                                                <img class="amount-button__icon" src="assets/icons/plus-icon.svg" alt="">
+                                            </button>
+                                            <span class="amount-button__amount">24</span><span>&nbsp;шт.</span>
+                                        </div>
+                                        <button class="product-card__favorites-btn button button_light-blue" id="favorites-button">
+                                            <img class="product-card__favorites-btn-icon" src="assets/icons/favorites-blue-icon.svg" alt="">
+                                            <img class="product-card__favorites-btn-active-icon" src="assets/icons/favorites-active-icon.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-card__features">
+                                <h2 class="product-card__features-title">Характеристики</h2>
+                                <div class="product-card__features-columns">
+                                    <div class="product-card__features-column">
+                                        <div class="product-card__feature">
+                                            <span class="product-card__feature-title">ELC00696</span>
+                                            <span class="product-card__feature-text">Код поставщика</span>
+                                        </div>
+                                        <div class="product-card__feature">
+                                            <span class="product-card__feature-title">ELC00696</span>
+                                            <span class="product-card__feature-text">Код РАЭК</span>
+                                        </div>
+                                        <div class="product-card__feature">
+                                            <span class="product-card__feature-title">Electric used</span>
+                                            <span class="product-card__feature-text">Бренд</span>
+                                        </div>
+                                        <div class="product-card__feature">
+                                            <span class="product-card__feature-title">ELC0200000696</span>
+                                            <span class="product-card__feature-text">Код производителя</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-card__features-column">
+                                        <div class="product-card__feature">
+                                            <span class="product-card__feature-title">ELC0200000696</span>
+                                            <span class="product-card__feature-text">Артикул</span>
+                                        </div>
+                                        <div class="product-card__feature">
+                                            <span class="product-card__feature-title">ELC00696</span>
+                                            <span class="product-card__feature-text">Код ETM</span>
+                                        </div>
+                                        <div class="product-card__feature">
+                                            <span class="product-card__feature-title">ELC00696</span>
+                                            <span class="product-card__feature-text">Серия</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-card__description">
+                            <h2 class="product-card__description-title">Описание товара</h2>
+                            <p class="product-card__description-text">Создание приверженного покупателя специфицирует неопровержимый комплексный анализ ситуации. CTR существенно
+                                индуцирует из&nbsp;ряда вон выходящий SWOT-анализ. Воздействие на&nbsp;потребителя определяет возрастающий
+                                интеграл по&nbsp;поверхности, что известно даже школьникам. Отсюда естественно следует, что коммуникация
+                                уравновешивает косвенный фактор коммуникации. Поле направлений естественно допускает экспериментальный
+                                скачок функции, таким образом сбылась мечта идиота&nbsp;&mdash; утверждение полностью доказано.
+                                Арифметическая прогрессия притягивает линейно зависимый пул лояльных изданий.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <section class="footer__top">
+                <div class="footer__top-left">
+                    <a href="./index.html">
+                        <img class="footer__top-logo" src="assets/icons/brand.svg" alt="">
+                    </a>
+                    <div class="footer__top-support-column">
+                        <span class="footer__top-support-contact">8 800 841-95-95</span>
+                        <span class="footer__top-support-label">Служба поддержки</span>
+                    </div>
+                    <div class="footer__top-support-column">
+                        <a class="footer__top-support-contact" href="mailto:support@sport.ru">support@sport.ru</a>
+                        <span class="footer__top-support-label">Служба поддержки</span>
+                    </div>
+                </div>
+                <div class="footer-top-menu">
+                    <a class="footer-top-menu__link" href="#">Вакансии</a>
+                    <a class="footer-top-menu__link" href="#">Блог</a>
+                    <a class="footer-top-menu__link" href="#">Акции</a>
+                    <button class="button button_light-blue footer-top-menu__button">Предложить идею</button>
+                </div>
+            </section>
+            <section class="footer__menu">
+                <div class="footer-menu">
+                    <div class="footer-menu__column">
+                        <span class="footer-menu__column-title">Женщинам</span>
+                        <ul class="footer-menu__column-items">
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Одежда</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Обувь</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Аксессуары</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Белье</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Bra fitting</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__column">
+                        <span class="footer-menu__column-title">Мужчинам</span>
+                        <ul class="footer-menu__column-items">
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Одежда</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Обувь</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Аксессуары</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Белье</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__column">
+                        <span class="footer-menu__column-title">Детям</span>
+                        <ul class="footer-menu__column-items">
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Одежда</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Обувь</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Аксессуары</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Белье</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Игрушки</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Малыши</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu__column">
+                        <span class="footer-menu__column-title">Виды спорта</span>
+                        <ul class="footer-menu__column-items">
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Велоспорт</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Туризм</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Тренажеры и фитнес</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Командные виды спорта</a>
+                            </li>
+                            <li class="footer-menu__link-wrapper">
+                                <a class="footer-menu__link" href="#">Самокаты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="footer__bottom">
+                <div class="footer-bottom-menu">
+                    <a class="footer-bottom-menu__link" href="#">
+                        <img class="footer-bottom-menu__link-icon" src="assets/icons/document-icon.svg" alt="">
+                        <span>PDF презентация</span>
+                    </a>
+                    <a class="footer-bottom-menu__link" href="#">
+                        <img class="footer-bottom-menu__link-icon" src="assets/icons/camera-icon.svg" alt="">
+                        <span>Видео инструкция</span>
+                    </a>
+                    <a class="footer-bottom-menu__link" href="#">
+                        <img class="footer-bottom-menu__link-icon" src="assets/icons/info-icon.svg" alt="">
+                        <span>FAQ</span>
+                    </a>
+                    <a class="footer-bottom-menu__link footer-menu__link_blue" href="#">
+                        <img class="footer-bottom-menu__link-icon footer-menu__youtube-icon" src="assets/icons/youtube-icon.svg" alt="">
+                        <span>Мы на YouTube</span>
+                    </a>
+                    <a class="footer-bottom-menu__link" href="#">
+                        Политика конфиденциальности
+                    </a>
+                    <a class="footer-bottom-menu__link" href="#">
+                        Лицензионное соглашение
+                    </a>
+                </div>
+                <p class="footer__info">
+                    Настоящая Политика обработки персональных данных разработана в&nbsp;соответствии с&nbsp;Конституцией
+                    Российской Федерации, Трудовым кодексом Российской Федерации, Гражданским кодексом Российской Федерации,
+                    Федеральным законом от&nbsp;27&nbsp;июля 2006 года 149-ФЗ &laquo;Об&nbsp;информации, информационных
+                    технологиях и&nbsp;о&nbsp;защите информации&raquo;
+                </p>
+                <a class="footer__creator-link">
+                    <img class="footer__creator-logo" src="assets/icons/brand-gray-icon.svg" alt="">
+                    <span>Разработка платформы</span>
+                </a>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>
