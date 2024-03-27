@@ -1,0 +1,24 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+body, button, input {
+  font-family: gotham-pro, serif;
+  color: #071435;
+}
+
+button {
+  border: 0 none;
+  background: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=reset.css.map */
